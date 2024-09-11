@@ -4,7 +4,7 @@ using namespace std;
 void alternateSwap(int arr[], int size){
     int start = 0; 
     int end = start + 1;
-    while(start>end){
+    while(start<size && end<size){
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
