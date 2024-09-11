@@ -4,7 +4,7 @@ using namespace std;
 void alternateSwap(int arr[], int size){
     int start = 0; 
     int end = start + 1;
-    for(int i=0; i<size/2; i++){
+    while(start>end){
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
@@ -12,6 +12,14 @@ void alternateSwap(int arr[], int size){
         start = start + 2;
         end = end + 2;
     }
+    // for(int i=0; i<size/2; i++){
+    //     int temp = arr[start];
+    //     arr[start] = arr[end];
+    //     arr[end] = temp;
+        
+    //     start = start + 2;
+    //     end = end + 2;
+    // }
     cout<<"After  : ";
     for(int i=0; i<size; i++){
         cout<<arr[i]<<" ";
@@ -25,7 +33,7 @@ void alternateSwap(int arr[], int size){
 }
 
 int main(){
-    int arr[]={1,2,3,4,5,6,7,8};
+    int arr[]={1,2,3,4,5,6,7,8,9};
     int size = sizeof(arr)/sizeof(arr[0]);
     cout<<"Before : ";
     for(int i=0; i<size; i++){
